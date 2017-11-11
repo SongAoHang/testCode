@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TEST</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+		body {
+			font-family: "Microsoft YaHei";
+		}
+		.banner {
+			background-image: url("./img/bg.png");
+			width: 100%;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			margin-top: -12px;
+		}
+		.topImg {
+			text-align: center;
+			padding-top: 130px;
+		}
+		.topImg img {
+			width: 35%;
+			position: sticky;
+			z-index: 99;
+			margin-left: -5%;
+			margin-bottom: -10px;
+		}
+		.leftImg {
+			text-align: center;
+		}
+		.leftImg img {
+			width: 90%;
+			margin: -30px -60px 0 0;
+		}
+		.register {
+			text-align: center;
+			margin-bottom: 70px;
+		}
+		.rows {
+			line-height: 73px;
+		}
+		.registerContent {
+			background-color: #ffaa5f;
+			border-radius: 21px;
+			opacity: 0.9;
+			width: 69%;
+			height: 495px;
+			margin-left: 5%;
+			padding: 40px 20px 20px 70px;
+		}
+
+		.registerContent .input {
+			background:rgba(0, 0, 0, 0);
+			border-left:none;
+			border-right:none;
+			border-top:none;
+			border-bottom:1px solid #989898;
+			outline:none;
+			height: 35px;
+			width: 80%;
+		}
+		.registerContent .title {
+			font-size: 2.8rem;
+			color:  #989898;
+			float: left;
+		}
+		.registerContent .role {
+			font-size: 2.5rem;
+			color:  #989898;
+			margin-right: 30px;
+		}
+		.registerContent .roles .check1{
+			margin-left: -100px;
+		}
+		.registerImg {
+			background-image: url("./img/registerBtn.png");
+			font-size: 2.8rem;
+			color: white;
+			border-radius: 21px;
+			height: 50px;
+			width: 165px;
+			padding-top: 3px;
+			margin:0 auto;
+			outline: none;
+			border: none;
+		}
+		.registerBtn {
+			margin-left: -10%;
+		}
+		.carriers {
+			background-image: url("./img/carriers.jpg");
+			width: 100%;
+			/*min-height: 794px;*/
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: cover;
+			margin-top: -20px;
+			padding-bottom: 140px;
+		}
+		.containerImg img {
+			width: 90%;
+		}
+		.carriers .container {
+			padding-top: 100px;
+		}
+		.blackText {
+			color: black;
+			font-size: 38px;
+			font-weight: initial;
+		}
+		.whiteText {
+			color: white;
+			font-size: 35px;
+			font-weight: lighter;
+			padding: 10px 0 50px 0;
+		}
+		.carriersText {
+			width: 85%;
+			margin-left: 2%;
+			padding: 90px 20px 20px 70px;
+		}
+		.moreContainerImg {
+			background-image: url("./img/registerBtn.png");
+			font-size: 35px;
+			color: white;
+			border-radius: 28px;
+			height: 55px;
+			width: 240px;
+			text-align: center;
+			outline: none;
+			border: none;
+		}
+		.rightApple img {
+			width: 87%;
+		}
+		.carriersTitle {
+			margin: -58% 0 0 49%;
+			color: white;
+			font-size: 35px;
+			letter-spacing: 3px;
+		}
+		.carriersTitle .find {
+			color: #FEE103;
+		}
+		.carrierLable {
+			margin-left: 12%;
+			font-size: 60px;
+			letter-spacing: 12px;
+		}
+		.second {
+			margin-top: 5%;
+		}
+		.shipperContent .publish {
+			color: #FD6512;
+		}
+		.shipperContent {
+			padding: 0 0 0 12%;
+		}
+		.shipperContent .shipperLable {
+			font-size: 70px;
+			letter-spacing: 22px;
+			font-weight: 600;
+		}
+		.shipperContent .publishLable {
+			font-size: 45px;
+		}
+		.shipperContent .ulList {
+			font-size: 30px;
+			line-height: 90px;
+			margin: 110px 0 40px 20px;
+			font-weight: 600;
+		}
+		.shipperContent .ulList li {
+			list-style-type: initial;
+		}
+		.moreContainerRightImg {
+			background-image: url("./img/registerBtn.png");
+			font-size: 35px;
+			color: white;
+			border-radius: 28px;
+			height: 55px;
+			width: 240px;
+			text-align: center;
+			outline: none;
+			border: none;
+		}
+		.second .rightApple {
+			margin-top: 6%;
+		}
+
+		.bottomPartner {
+			background-image: url("./img/3.jpg");
+			width: 100%;
+			/*min-height: 794px;*/
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+		.partnerHeader {
+			margin:0 auto;
+			font-size: 60px;
+			color: #6F7071;
+			padding-top: 90px;
+		}
+		.partnerHeader .number {
+			color: #FD6512;
+			font-size: 60px;
+			font-weight: 600;
+
+		}
+		.partnerHeader img {
+			width: 30px !important;
+			margin-top: -10px;
+		}
+		.partnerIcon {
+			text-align: center;
+		}
+		.bottomPartner img {
+			width: 80%;
+		}
+		.contacts {
+			text-align: center;
+			background-color: #41424D;
+			color: white;
+			font-size: 26px;
+			height: 100px;
+		}
+		.line {
+			float: left;
+		}
+		@media (min-width: 1200px) {
+			.container {
+				width: 100%;
+			}
+			.contacts {
+				height: 130px;
+			}
+			.contactsContent {
+				padding-top: 35px;
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: 1750px){
+			.carrierLable {
+				font-size: 50px;
+				margin-left: 10%;
+			}
+			.carriersTitle {
+				margin: -58% 0 0 49%;
+				font-size: 28px;
+			}
+			.blackText {
+				font-size: 35px;
+			}
+			.whiteText {
+				font-size: 32px;
+				padding-bottom: 30px;
+			}
+			.moreContainerImg, .moreContainerRightImg {
+				font-size: 32px;
+				height: 50px;
+				width: 230px;
+			}
+			.shipperContent .shipperLable {
+				font-size: 60px;
+			}
+			.shipperContent .publishLable {
+				font-size: 40px;
+			}
+			.shipperContent .ulList {
+				font-size: 25px;
+				line-height: 75px;
+				margin: 70px 0 40px 10px;
+			}
+		}
+
+		@media screen and (max-width: 1550px){
+			.registerContent .roles .check1 {
+				margin-left: 0;
+			}
+			.contacts {
+				font-size: 23px;
+			}
+		}
+
+		@media screen and (max-width: 1450px){
+			.carrierLable {
+				font-size: 40px;
+				margin-left: 10%;
+			}
+			.carriersTitle {
+				margin: -58% 0 0 49%;
+				font-size: 26px;
+			}
+			.blackText {
+				font-size: 32px;
+			}
+			.whiteText {
+				font-size: 29px;
+				padding-bottom: 20px;
+			}
+			.moreContainerImg, .moreContainerRightImg {
+				font-size: 29px;
+				height: 45px;
+				width: 210px;
+			}
+			.shipperContent .shipperLable {
+				font-size: 55px;
+			}
+			.shipperContent .publishLable {
+				font-size: 36px;
+			}
+			.shipperContent .ulList {
+				font-size: 22px;
+				line-height: 65px;
+			}
+			.rows {
+				line-height: 53px;
+			}
+			.registerContent {
+				height: 385px;
+			}
+			.contacts {
+				font-size: 18px;
+			}
+		}
+
+		@media screen and (max-width: 1300px){
+			.registerContent .input {
+				width: 60%;
+			}
+			.registerContent .title {
+				font-size: 24px;
+			}
+			.registerContent .role {
+				font-size: 21px;
+			}
+			.registerImg {
+				font-size: 24px;
+				height: 40px;
+				width: 130px;
+				padding-top: 0;
+			}
+			.rows {
+				line-height: 53px;
+			}
+			.registerContent {
+				height: 350px;
+			}
+			.registerContent {
+				padding: 20px 20px 0px 40px;
+			}
+			.carrierLable {
+				font-size: 35px;
+				margin-left: 10%;
+			}
+			.carriersTitle {
+				margin: -58% 0 0 49%;
+				font-size: 21px;
+			}
+		}
+		@media screen and (max-width: 1250px) {
+			.contacts {
+				font-size: 16px;
+			}
+		}
+		@media screen and (max-width: 1200px){
+			.carrierLable {
+				font-size: 30px;
+				margin-left: 10%;
+			}
+			.carriersTitle {
+				margin: -58% 0 0 49%;
+				font-size: 18px;
+			}
+			.blackText {
+				font-size: 30px;
+			}
+			.whiteText {
+				font-size: 27px;
+			}
+			.moreContainerImg, .moreContainerRightImg {
+				font-size: 27px;
+				height: 40px;
+				width: 200px;
+			}
+			.contacts {
+				font-size: 14px;
+			}
+		}
+
+		@media screen and (max-width: 1024px){
+			.carrierLable {
+				font-size: 30px;
+				margin-left: 10%;
+			}
+			.carriersTitle {
+				margin: -58% 0 0 49%;
+				font-size: 18px;
+			}
+
+		}
+
+		@media screen and (max-width: 995px){
+			.registerContent {
+				padding: 20px 20px 0px 20px;
+				margin: 0 auto;
+				width: 89%;
+				height: 255px;
+			}
+			.rows {
+				line-height: 33px;
+			}
+			.topImg img {
+				margin-left: 0;
+				margin-bottom: 50px;
+			}
+			.carriersTitle {
+				margin: -54% 0 0 48%;
+				font-size: 12px;
+			}
+			.carrierLable {
+				font-size: 23px;
+			}
+			.containerImg {
+				height: 550px;
+			}
+			.line {
+				display: none;
+			}
+			.bottomPartner img {
+				width: 50%;
+			}
+			.contacts {
+				height: 140px;
+			}
+			.register {
+				margin-top: -40px;
+			}
+		}
+		@media screen and (max-width: 900px){
+
+		}
+		@media screen and (max-width: 768px){
+			.register {
+				margin-top: 10px;
+			}
+			.registerContent {
+				width: 69%;
+			}
+			.carriersTitle {
+				margin: -56% 0 0 48%;
+				font-size: 28px;
+			}
+			.carrierLable {
+				font-size: 35px;
+				margin-left: 17%;
+			}
+			.contacts {
+				height: 280px;
+			}
+		}
+		@media screen and (max-width: 600px){
+			.carriersTitle {
+				margin: -54% 0 0 51%;
+			}
+
+		}
+		@media screen and (max-width: 500px){
+			.registerContent .title {
+				font-size: 18px;
+			}
+			.registerContent .role {
+				font-size: 16px;
+			}
+			.registerImg {
+				font-size: 24px;
+				height: 40px;
+				width: 130px;
+				padding-top: 0;
+			}
+			.rows {
+				line-height: 40px;
+			}
+			.registerContent {
+				height: 300px;
+			}
+			.registerContent {
+				padding: 20px 20px 0px 30px;
+			}
+			.registerContent .roles .check2 {
+				margin-left: -20px;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div>
+	<div class="banner">
+		<div class="topImg"><img src="./img/text.png"></div>
+		<div  class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 leftImg"><img src="./img/text2.png"></div>
+				<div class="col-xs-12 col-sm-6 col-md-6 register">
+					<div class="registerContent">
+						<div class="rows"><span class="title">姓 名 </span><input class="input" type="text" name=""></div>
+						<div class="rows"><span class="title">邮 箱 </span><input class="input" type="text" name=""></div>
+						<div class="rows"><span class="title">公 司 </span><input class="input" type="text" name=""></div>
+						<div class="rows"><span class="title">职 位 </span><input class="input" type="text" name=""></div>
+						<div class="rows"><span class="title">角 色</span>
+							<div class="roles">
+								<input class="check1" type="checkbox" /><span class="role">承运商</span>
+								<input class="check2" type="checkbox" /><span class="role">货主</span>
+							</div>
+						</div>
+						<div class="registerBtn">
+							<button class="registerImg">马上注册</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="carriers">
+		<div  class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6 containerImg">
+					<img src="./img/02-01.png">
+					<div class="carriersTitle">
+						<div class="carrierLable">承运商</div>
+						<div>我要<span class="find">寻找</span>运输项目</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 containerContent">
+					<div class="carriersText">
+						<div class="blackText">项目货源对接</div>
+						<div class="whiteText">基于承运商运作能力及业务专长，提供不同类型货主项目</div>
+						<div class="blackText">投标进度反馈</div>
+						<div class="whiteText">及时反馈不同标的申请结果，以及货主下一轮审核邀请</div>
+						<div class="blackText">项目方案支持</div>
+						<div class="whiteText">来自甲方及大型三方的资深物流专家，提供诊断咨询</div>
+						<div class="moreContainerBtn">
+							<button class="moreContainerImg">更多运输项目</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row second">
+				<div class="col-xs-12 col-sm-7 col-md-7 shipperContent">
+					<div class="shipperText">
+						<div class="shipperLable">货主</div>
+						<div class="publishLable">我要<span class="publish">发布</span>运输项目</div>
+						<div class="row ulList">
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<ul>
+									<li>承运商资源招募</li>
+									<li>候选承运商精准匹配</li>
+									<li>承运商准入评估最佳实践</li>
+								</ul>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<ul>
+									<li>智能竞价评标</li>
+									<li>跨货主间协同</li>
+									<li>物流解决方案</li>
+								</ul>
+							</div>
+						</div>
+						<div class="moreContainerBtn">
+							<button class="moreContainerRightImg">更多货主权益</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-5 col-md-5 rightApple"><img src="./img/02-02.jpg"></div>
+			</div>
+		</div>
+	</div>
+	<div class="bottomPartner">
+		<div  class="container">
+			<div class="partnerHeader"><span class="number">1500</span><img src="./img/03-00.png">企业共同的选择</div>
+			<div class="row partnerIcon">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-01.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-02.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-03.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-04.jpg">
+				</div>
+			</div>
+			<div class="row partnerIcon">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-05.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-06.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-07.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-08.jpg">
+				</div>
+			</div>
+			<div class="row partnerIcon">
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-09.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-10.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-11.jpg">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<img src="./img/03-12.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contacts">
+		<div class=" contactsContent">
+			<div class="col-md-5">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<img src="./img/04-01.png">
+					<span>400-8219-800</span>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<img class="line" src="./img/04-00.png">
+					<img src="./img/04-02.png">
+					<span>ww.otms.com</span>
+				</div>
+			</div>
+
+			<div class="col-md-7">
+				<div class="col-xs-12 col-sm-6 col-md-5">
+					<img class="line" src="./img/04-00.png">
+					<img src="./img/04-03.png">
+					<span>iloveotms</span>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<img class="line" src="./img/04-00.png">
+					<img src="./img/04-04.png">
+					<span>上海峨山路91弄100号701-703</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
